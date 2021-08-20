@@ -70,6 +70,8 @@ struct  CSV {
                             field.removeLast()
                             field = field.replacingOccurrences(of: "\"\"", with: "\"")
                         }
+                    }else{
+                        precondition(!chip.contains("\""), "文件格式错误")
                     }
                 }else{
                     if isEndLine {
